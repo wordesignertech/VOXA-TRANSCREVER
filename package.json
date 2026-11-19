@@ -1,0 +1,17 @@
+{
+  "name": "voxa-transcrever-build",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Ferramentas de desenvolvimento e empacotamento do Voxa Transcrever",
+  "scripts": {
+    "deps": "bash scripts/baixar-dependencias.sh",
+    "start": "electron app",
+    "build:win": "node scripts/empacotar.js"
+  },
+  "devDependencies": {
+    "@electron/asar": "^3.2.0",
+    "electron": "33.4.11",
+    "resedit": "^3.0.0"
+  },
+  "license": "MIT"
+}
