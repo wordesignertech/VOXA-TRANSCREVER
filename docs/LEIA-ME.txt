@@ -1,0 +1,33 @@
+VOXA TRANSCREVER — transcrição de áudio na placa de vídeo  (Windows 10/11, 64 bits)
+==================================================================================
+
+COMO USAR
+1. Extraia a pasta "Voxa Transcrever" para um local fixo (ex.: D:\Programas\Voxa Transcrever).
+2. Abra "Voxa Transcrever.exe". Se o Windows mostrar "O Windows protegeu o computador"
+   (o app não tem assinatura digital), clique em "Mais informações" › "Executar assim mesmo".
+3. Na primeira vez:
+   • Clique em "Baixar" no aviso do modelo (large-v3-turbo, 1,6 GB). Fica salvo no PC.
+   • Se você tem placa NVIDIA, clique em "Ativar" no aviso da aceleração pela placa de vídeo
+     (download único de ~670 MB). Sem isso, a transcrição roda no processador (mais lenta).
+4. Arraste áudios ou vídeos para a janela. Os arquivos de texto são salvos ao lado do original
+   (ou na pasta que você escolher em "Salvar em").
+
+PLACA DE VÍDEO
+- Aceleração por GPU: placas NVIDIA (GeForce GTX 10xx ou mais nova) com driver atualizado.
+  Se der erro na GPU, o app refaz a transcrição no processador automaticamente.
+- AMD / Intel: o app funciona, mas transcreve pelo processador. Prefira os modelos
+  "large-v3-turbo compacto" ou "small".
+- Faltou memória de vídeo? Use "large-v3-turbo compacto" (574 MB).
+
+DICAS
+- "Vocabulário": escreva nomes próprios e termos técnicos para o modelo acertar a grafia.
+- "Pular silêncios" deixa mais rápido e evita frases inventadas em trechos mudos.
+- Em Transcrições você ouve o áudio, clica num horário para pular até ele e corrige o texto.
+- "Transcrever gravações do Voxa" (em Modelos e GPU) põe na fila cada gravação nova do Voxa.
+  O app precisa estar aberto para isso.
+
+ONDE FICAM AS COISAS
+- Modelos e motor da GPU: %LOCALAPPDATA%\VoxaTranscrever
+- Transcrições e configurações: %APPDATA%\Voxa Transcrever
+
+Motor de transcrição: whisper.cpp (MIT). Conversão de áudio: FFmpeg (LGPL).
