@@ -1,0 +1,40 @@
+name: Relatar um problema
+description: Algo não funcionou como deveria
+labels: [bug]
+body:
+  - type: textarea
+    id: oque
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o problema e, se houver, cole a mensagem de erro que aparece na fila.
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. Adicionei um arquivo .mp4 de 1 hora
+        2. Cliquei em…
+  - type: input
+    id: versao
+    attributes:
+      label: Versão do Voxa Transcrever
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Versão do Windows
+      placeholder: "Windows 11 23H2"
+  - type: input
+    id: gpu
+    attributes:
+      label: Placa de vídeo e driver
+      placeholder: "NVIDIA GeForce RTX 3060, driver 566.36"
+  - type: input
+    id: modelo
+    attributes:
+      label: Modelo usado
+      placeholder: "large-v3-turbo"
